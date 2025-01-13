@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dynamo0077/numbering-app/static/css/main.f855e6bc.css",
+    "main.js": "/dynamo0077/numbering-app/static/js/main.d9b96b49.js",
+    "static/js/488.215994e3.chunk.js": "/dynamo0077/numbering-app/static/js/488.215994e3.chunk.js",
+    "static/media/yellow.png": "/dynamo0077/numbering-app/static/media/yellow.bd019e11c067ced38c7e.png",
+    "static/media/red.png": "/dynamo0077/numbering-app/static/media/red.ba819285fe85bdddd6c1.png",
+    "static/media/white.png": "/dynamo0077/numbering-app/static/media/white.48bde04e223dfae1e3d0.png",
+    "static/media/green.png": "/dynamo0077/numbering-app/static/media/green.7b2303ea1dd5c6b190a1.png",
+    "static/media/blue.png": "/dynamo0077/numbering-app/static/media/blue.6fbcd729dbc5b6f19f07.png",
+    "static/media/brown.png": "/dynamo0077/numbering-app/static/media/brown.dee6126183182b684534.png",
+    "static/media/start.png": "/dynamo0077/numbering-app/static/media/start.e5766c8d529e214242ff.png",
+    "index.html": "/dynamo0077/numbering-app/index.html",
+    "main.f855e6bc.css.map": "/dynamo0077/numbering-app/static/css/main.f855e6bc.css.map",
+    "main.d9b96b49.js.map": "/dynamo0077/numbering-app/static/js/main.d9b96b49.js.map",
+    "488.215994e3.chunk.js.map": "/dynamo0077/numbering-app/static/js/488.215994e3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.d9b96b49.js"
+  ]
+}
