@@ -6,6 +6,10 @@ import brown from '../assets/brown.png'
 import green from '../assets/green.png'
 import blue from '../assets/blue.png'
 import start from '../assets/start.png'
+import { Button } from '@mui/material';
+import { Typography } from '@mui/material';
+
+
 
 const Numbering = () => {
     let [count, setCount] = useState(0)
@@ -21,16 +25,6 @@ const Numbering = () => {
         green,
         blue
     ]
-
-    const handleIncrement = () => {
-        if (count < 5)
-            setCount(count + 1);
-    }
-
-    const handleDecrement = () => {
-        if (count > 0)
-            setCount(count - 1);
-    }
 
     const randomCounter = () => {
         if (usedCounts.length === 5) {
@@ -57,9 +51,19 @@ const Numbering = () => {
         />) : (
         <img src={images[count]}
             alt={`Image ${count}`}
-            style={{ maxWidth: '50%', height: 'auto', marginTop: '20px', border: "2px solid red" }}
+            style={{ maxWidth: '50%', height: 'auto', marginTop: '20px' }}
         />
     );
+
+    // const handleIncrement = () => {
+    //     if (count < 5)
+    //         setCount(count + 1);
+    // }
+
+    // const handleDecrement = () => {
+    //     if (count > 0)
+    //         setCount(count - 1);
+    // }
 
     // const startImageElement = (
     //     <img
@@ -82,14 +86,17 @@ const Numbering = () => {
     return (
         <>
             <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                <span>Counter : {count}</span>
+                <Typography variant="outlined" color="success" style={{fontSize: '40px'}}>
+                    Counter : {count}
+                </Typography>
                 <br />
-                <button onClick={handleIncrement}>Click to increment</button>
-                <button onClick={handleDecrement} style={{ marginLeft: '10px' }}>Click to decrement</button>
-                <button onClick={randomCounter}
+                {/* <button onClick={handleIncrement}>Click to increment</button>
+                <button onClick={handleDecrement} style={{ marginLeft: '10px' }}>Click to decrement</button> */}
+                <Button onClick={randomCounter}
+                    variant="contained" color="primary"
                     style={{ marginLeft: "10px", backgroundColor: 'lightgreen' }}>
                     Generate Random Counter
-                </button>
+                </Button>
 
                 <div style={{ marginTop: '20px' }}>
                     {imageElement}

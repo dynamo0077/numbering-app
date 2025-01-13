@@ -1,9 +1,14 @@
 {
-  "homepage": "https://github.com/dynamo0077/billiards-numbering-player.git",
+  "homepage": "https://dynamo0077.github.io/numbering-app",
   "name": "billiards-numbering",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.3.1",
+    "@mui/lab": "^6.0.0-beta.22",
+    "@mui/material": "^6.3.1",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -35,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
