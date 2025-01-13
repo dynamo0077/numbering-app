@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/numbering-app/static/css/main.f855e6bc.css",
-    "main.js": "/numbering-app/static/js/main.cf7dbc24.js",
+    "main.js": "/numbering-app/static/js/main.9b4ba4c0.js",
     "static/js/488.215994e3.chunk.js": "/numbering-app/static/js/488.215994e3.chunk.js",
     "static/media/yellow.png": "/numbering-app/static/media/yellow.bd019e11c067ced38c7e.png",
     "static/media/red.png": "/numbering-app/static/media/red.ba819285fe85bdddd6c1.png",
@@ -12,11 +12,11 @@
     "static/media/start.png": "/numbering-app/static/media/start.e5766c8d529e214242ff.png",
     "index.html": "/numbering-app/index.html",
     "main.f855e6bc.css.map": "/numbering-app/static/css/main.f855e6bc.css.map",
-    "main.cf7dbc24.js.map": "/numbering-app/static/js/main.cf7dbc24.js.map",
+    "main.9b4ba4c0.js.map": "/numbering-app/static/js/main.9b4ba4c0.js.map",
     "488.215994e3.chunk.js.map": "/numbering-app/static/js/488.215994e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.cf7dbc24.js"
+    "static/js/main.9b4ba4c0.js"
   ]
 }
