@@ -137,10 +137,11 @@ const Numbering = () => {
                 </FormControl>
 
                 {/* Move the Start button here */}
-                <button onClick={randomCounter}
-                    className="custom-button"
-                    variant="contained" color="primary"
-                    style={{ display: 'block', margin: '10px auto', backgroundColor: 'lightgreen' }}>
+                <button
+                    onClick={randomCounter}
+                    className="animated-button" // Add class for animation
+                    variant="contained"
+                    style={{ display: 'block', margin: '10px auto' }}>
                     Start
                 </button>
 
