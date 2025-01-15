@@ -110,7 +110,15 @@ const Numbering = () => {
                     label='Number of Players'
                     value={numberOfPlayers}
                     onChange={handlePlayerCountChange}
-                    style={{ marginRight: '10px', width: '200px' }}
+                    InputProps={{
+                        style: {
+                            marginBottom: '10px',
+                        }
+                    }}
+                    style={{
+                        marginRight: '10px',
+                        width: '200px'
+                    }}
                     disabled={numberOfPlayers > 7}
                 />
 
