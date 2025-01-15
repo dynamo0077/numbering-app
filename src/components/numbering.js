@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import white from '../assets/white.png'
-import red from '../assets/red.png'
 import yellow from '../assets/yellow.png'
 import brown from '../assets/brown.png'
 import green from '../assets/green.png'
@@ -22,7 +21,6 @@ const Numbering = () => {
     const images = [
         start,
         white,
-        red,
         yellow,
         brown,
         green,
