@@ -7,10 +7,7 @@ import blue from '../assets/blue.png'
 import start from '../assets/start.png'
 import pink from '../assets/pink.png'
 import black from '../assets/black.png'
-import { Button, TextField } from '@mui/material';
-import { Typography } from '@mui/material';
-
-
+import { MenuItem, Select, FormControl, InputLabel } from '@mui/material';
 
 const Numbering = () => {
     let [count, setCount] = useState(0)
@@ -22,8 +19,8 @@ const Numbering = () => {
         start,
         white,
         yellow,
-        brown,
         green,
+        brown,
         blue,
         pink,
         black
@@ -58,15 +55,6 @@ const Numbering = () => {
         />
     );
 
-    const handlePlayerCountChange = (e) => {
-        const value = parseInt(e.target.value)
-        if (value <= 7 && value >= 1) {
-            setNumberOfPlayers(value);
-        } else if (value > 7) {
-            setNumberOfPlayers(7);
-        }
-    }
-
     // const handleIncrement = () => {
     //     if (count < 5)
     //         setCount(count + 1);
@@ -98,35 +86,63 @@ const Numbering = () => {
     return (
         <>
             <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                <Typography variant="outlined" color="danger" style={{ fontSize: '40px', marginBottom: '20px', display: 'block' }}>
-                    Player Number : {count}
-                </Typography>
+                <div className="threeD-text">Player Going: {count}</div>
                 {/* <button onClick={handleIncrement}>Click to increment</button>
                 <button onClick={handleDecrement} style={{ marginLeft: '10px' }}>Click to decrement</button> */}
 
-                <TextField
-                    variant='outlined'
-                    type='number'
-                    label='Number of Players'
-                    value={numberOfPlayers}
-                    onChange={handlePlayerCountChange}
-                    InputProps={{
-                        style: {
-                            marginBottom: '10px',
-                        }
+                <FormControl
+                    variant="outlined"
+                    sx={{
+                        marginBottom: '10px',
+                        width: '200px',
+                        backgroundColor: '#f7f7f7',  // Light background
+                        borderRadius: '5px',  // Rounded corners
+                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' // Subtle shadow
                     }}
-                    style={{
-                        marginRight: '10px',
-                        width: '200px'
-                    }}
-                    disabled={numberOfPlayers > 7}
-                />
+                >
+                    <InputLabel
+                        id="number-of-players-label"
+                        sx={{ fontWeight: 'bold', color: '#333' }}  // Bold label
+                    >
+                        Number of Players
+                    </InputLabel>
+                    <Select
+                        labelId="number-of-players-label"
+                        value={numberOfPlayers}
+                        onChange={(e) => setNumberOfPlayers(e.target.value)}
+                        sx={{
+                            fontWeight: 'bold', // Make the text bold
+                            color: '#333', // Text color
+                            '& .MuiSelect-select': {  // Style for the select box
+                                padding: '10px', // Adjust padding
+                            },
+                            '&:before': { // Style for the underline before select
+                                borderBottom: `2px solid #ccc`,
+                            },
+                            '&:after': { // Style for the underline after select (focus)
+                                borderBottom: `2px solid #6a11cb`,
+                            },
+                            '&:focus': {
+                                borderColor: '#6a11cb',
+                            }
+                        }}
+                        fullWidth // Make it full width if needed
+                    >
+                        {Array.from({ length: 7 }, (_, index) => (
+                            <MenuItem key={index + 1} value={index + 1}>
+                                {index + 1}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
 
-                <Button onClick={randomCounter}
+                {/* Move the Start button here */}
+                <button onClick={randomCounter}
+                    className="custom-button"
                     variant="contained" color="primary"
-                    style={{ marginLeft: "10px", backgroundColor: 'lightgreen' }}>
-                    Generate Random Counter
-                </Button>
+                    style={{ display: 'block', margin: '10px auto', backgroundColor: 'lightgreen' }}>
+                    Start
+                </button>
 
                 <div style={{ marginTop: '20px' }}>
                     {imageElement}

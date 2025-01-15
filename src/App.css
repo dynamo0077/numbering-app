@@ -1,5 +1,106 @@
 body {
   margin: 0;
-  height: 100vh; /* Ensures the gradient covers the full viewport height */
-  background: linear-gradient(135deg, #32478b, #feb47b); /* Adjust colors as needed */
+  background-image: linear-gradient(to right bottom, #78486c, #77699a, #678dbf, #57afd4, #65d0da);
+}
+
+.threeD-text {
+  font-size: 48px;
+  /* Adjust size as necessary */
+  color: #dce775;
+  /* Main text color */
+  text-shadow:
+    1px 1px 0 #000,
+    2px 2px 0 #000,
+    3px 3px 0 #000,
+    4px 4px 0 #000;
+  /* Shadow layers for the 3D effect */
+  font-weight: bold;
+  /* Optional: Make it bold */
+  margin-bottom: 20px;
+  /* Space below the text */
+}
+
+.custom-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  /* To hide the shadow before the push effect */
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.custom-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  transform: scaleY(0);
+  z-index: 1;
+}
+
+.custom-button:hover {
+  transform: translateY(-5px);
+}
+
+.custom-button:hover:before {
+  transform: scaleY(1);
+}
+
+.custom-button:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-input {
+  font-size: 18px;
+  /* Change the font size */
+  padding: 15px 20px;
+  /* Add padding for a better look */
+  border: none;
+  /* Remove default border */
+  border-radius: 10px;
+  /* Add rounded corners */
+  background: #e0e0e0;
+  /* Light background for the input */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow effect */
+  width: 100%;
+  /* Full width of its container */
+  max-width: 400px;
+  /* Max width for better layout */
+  transition: background-color 0.3s;
+  /* Smooth transition for background */
+  outline: none;
+  /* Remove default outline */
+  font-weight: bold;
+  /* Make the font bold */
+  color: #333;
+  /* Darker text color */
+}
+
+.custom-input::placeholder {
+  color: #aaa;
+  /* Placeholder color */
+}
+
+.custom-input:focus {
+  background: #fff;
+  /* Change background on focus */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Deeper shadow on focus */
+  border-radius: 10px;
+  /* Keep corners rounded */
+  border: 1px solid #6a11cb;
+  /* Optional: add border on focus */
 }
